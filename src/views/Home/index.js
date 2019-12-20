@@ -9,7 +9,7 @@ import {
 export default () => {
     return(
     <View>
-        <Text>home</Text>
+        <Text>home 5</Text>
     </View>
     );
 }
