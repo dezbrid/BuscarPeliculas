@@ -17,7 +17,7 @@ export default ({ navigation }) => {
           containerStyle={styles.inputSearch}
           placeholder='Buscar...' />
         <View style={styles.buttonsView}>
-          <Button containerStyle={styles.buttons} title='Limpiar' />
+          <Button containerStyle={styles.buttons} type="outline" title='Limpiar' />
           <Button containerStyle={styles.buttons} title='Buscar' />
         </View>
       </Card>
