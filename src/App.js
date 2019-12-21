@@ -3,7 +3,7 @@ import React from 'react';
 import {
   View,
   Text,
- } from 'react-native';
+} from 'react-native';
 import { Provider } from 'react-redux';
 import configureStore from './redux/store';
 import { NavigationNativeContainer } from '@react-navigation/native';
@@ -18,15 +18,17 @@ const Stack = createStackNavigator();
 
 
 const App = () => (
-  
+
   <Provider store={store}>
-  <View>
-    <Home/>
-    <MovieDetail/>
-    <Results/>
-  </View>
+    <NavigationNativeContainer>
+      <Stack.Navigator initialRouteName="Home">
+        <Stack.Screen name="Home" component={Home} />
+        <Stack.Screen name="Details" component={MovieDetail} />
+        <Stack.Screen name="Results" component={Results} />
+      </Stack.Navigator>
+    </NavigationNativeContainer>
   </Provider>
- 
+
 );
 
 export default App;
