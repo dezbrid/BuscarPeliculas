@@ -21,7 +21,7 @@ const App = () => (
 
   <Provider store={store}>
     <NavigationNativeContainer>
-      <Stack.Navigator initialRouteName="Home">
+      <Stack.Navigator initialRouteName="Home"  headerMode="none">
         <Stack.Screen name="Home" component={Home} />
         <Stack.Screen name="Details" component={MovieDetail} />
         <Stack.Screen name="Results" component={Results} />
