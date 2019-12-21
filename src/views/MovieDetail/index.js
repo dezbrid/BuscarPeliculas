@@ -9,7 +9,7 @@ import {
 export default () => {
     return(
     <View>
-        <Text>movie detail</Text>
+        <Text>movie detail 2</Text>
     </View>
     );
 }
