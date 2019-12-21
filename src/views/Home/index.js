@@ -11,7 +11,7 @@ export default ({navigation}) => {
 
     return(
     <View>
-        <Text>home 5</Text>
+        <Text>home 6</Text>
         <Button
         title="Go to Details"
         onPress={() => navigation.navigate('Details')}
