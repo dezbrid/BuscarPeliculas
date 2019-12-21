@@ -2,23 +2,23 @@ import React from 'react';
 import { View, } from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import { Card, Text, Button, Input } from 'react-native-elements'
-import styles from './styles';
+import {styles,containerStyles} from './styles';
 
 export default ({ navigation }) => {
 
   return (
     <View style={styles.view}>
-      <Card containerStyle={styles.card}>
+      <Card containerStyle={containerStyles.card}>
         <View style={styles.titleView}>
           <Text style={styles.title}>Bienvenvido!</Text>
           <Icon name='film' />
         </View>
         <Input
-          containerStyle={styles.inputSearch}
+          containerStyle={containerStyles.inputSearch}
           placeholder='Buscar...' />
         <View style={styles.buttonsView}>
-          <Button containerStyle={styles.buttons} type="outline" title='Limpiar' />
-          <Button containerStyle={styles.buttons} title='Buscar' />
+          <Button containerStyle={containerStyles.buttons} type="outline" title='Limpiar' />
+          <Button containerStyle={containerStyles.buttons} title='Buscar' />
         </View>
       </Card>
     </View>

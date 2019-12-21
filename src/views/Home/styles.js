@@ -7,12 +7,29 @@ const centeredStyleObj ={
     justifyContent : 'center'
 };
 
-const styles = StyleSheet.create({
+export const styles = StyleSheet.create({
     view:{
         flexDirection: 'column',
        
        ...centeredStyleObj
+    }, 
+    titleView:{
+        ...centeredStyleObj,
+        flexDirection: 'row',
+    },    
+    title:{
+        fontSize: 25,
+    },      
+    buttonsView:{
+        flexDirection: 'row',
+        paddingTop:20,
+        justifyContent : 'space-around'
+       
     },
+
+  });
+
+ export const containerStyles= {
     card:{
         flexDirection: 'column',
         width :'70%',
@@ -20,28 +37,12 @@ const styles = StyleSheet.create({
         padding:2,
         ...centeredStyleObj
     },
-    title:{
-        fontSize: 25,
-    },
-    titleView:{
-        ...centeredStyleObj,
-        flexDirection: 'row',
-    },
     inputSearch:{
         width:'80%',
         ...centeredStyleObj
-    },
-    buttonsView:{
-        flexDirection: 'row',
-        
-        paddingTop:20,
-        justifyContent : 'space-around'
-       
-    },
+    },    
     buttons:{
         width:'40%'
     }
 
-  });
-
-  export default styles;
+  }
