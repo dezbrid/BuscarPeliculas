@@ -21,8 +21,17 @@ export function* searchMovie({ payload }) {
 
    }
 }
+export function* searchMovieById ({payload}){
+   try {
+       const movie = yield call(apiCall, `&i=${payload}`, null, null, 'GET');
+       yield put({ type: SEARCH_MOVIE_BY_ID_COMPLETE, movie });
+   } catch (error) {
+       yield put({ type: SEARCH_MOVIE_BY_ID_ERROR, error });
+   }
+}
 
 export default function* search() {
    yield takeLatest(SEARCH_MOVIE_START, searchMovie);
+   yield takeLatest(SEARCH_MOVIE_BY_ID_START, searchMovieById);
 
 }
