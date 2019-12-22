@@ -6,18 +6,21 @@ import { styles, containerStyles } from './styles';
 
 export default ({ navigation }) => {
   const [searchText, setSearchText] = useState('');
-  const handleSearchTextChange = event => {
-    setSearchText(event.target.value)
+  const handleSearchTextChange = text => {
+    setSearchText(text)
   };
-  const handleCleanTextClick = () => {
+  const handleCleanTextClick = event => {
     setSearchText('');
   };
-  const handleSearchTextClick = () => {
-    navigation.navigate('Results', {
-      movieName: searchText,      
-    });
-	};
+  const handleSearchTextClick = event => {
 
+
+    navigation.navigate('Results', {
+
+      movieName: searchText,
+    });
+  };
+  
   return (
     <View style={styles.view}>
       <Card containerStyle={containerStyles.card}>
@@ -29,7 +32,7 @@ export default ({ navigation }) => {
           containerStyle={containerStyles.inputSearch}
           placeholder='Buscar...'
           value={searchText}
-          onChange={handleSearchTextChange} />
+          onChangeText={handleSearchTextChange} />
         <View style={styles.buttonsView}>
           <Button
             containerStyle={containerStyles.buttons}
@@ -39,7 +42,7 @@ export default ({ navigation }) => {
           <Button
             containerStyle={containerStyles.buttons}
             title='Buscar'
-            onPress={handleSearchTextClick}  />
+            onPress={handleSearchTextClick} />
         </View>
       </Card>
     </View>
