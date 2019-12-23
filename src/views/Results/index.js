@@ -45,7 +45,7 @@ export default ({ route, navigation }) => {
   };
 
   return (
-    <SafeAreaView>
+    <SafeAreaView style={{flex:1}}>
       {renderMovies()}
     </SafeAreaView>
   );
