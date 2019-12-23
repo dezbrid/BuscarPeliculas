@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { View, } from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome';
-import { Card, Text, Button, Input } from 'react-native-elements'
+import { Card, Text, Button, Input, Overlay } from 'react-native-elements'
 import { styles, containerStyles } from './styles';
 
 export default ({ navigation }) => {
